@@ -14,7 +14,7 @@ import SwiftUI
 /// // w/ Icon
 /// Icon("heart.fill")
 /// ```
-struct Icon: View {
+public struct Icon: View {
     
     private let systemName: String
     
@@ -26,7 +26,7 @@ struct Icon: View {
         self.systemName = systemName
     }
     
-    var body: some View {
+    public var body: some View {
         return Image(icon: systemName)
     }
 }

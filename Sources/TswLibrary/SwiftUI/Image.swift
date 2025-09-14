@@ -6,7 +6,7 @@
 import SwiftUI
 
 /// Extensions on SwiftUI's Image view.
-extension Image {
+public extension Image {
     
     /// Shorthand for initializing an `Image` view via `init(systemName: String)`
     ///
