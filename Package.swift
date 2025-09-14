@@ -16,15 +16,25 @@ let package = Package(
             targets: ["TswLibrary"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/lukaskubanek/LoremSwiftum.git", from: "2.2.1"),
+        .package(url: "https://github.com/apple/swift-testing.git", branch: "main")
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "TswLibrary"
+            name: "TswLibrary",
+            dependencies: [
+                .product(name: "LoremSwiftum", package: "LoremSwiftum"),
+            ]
         ),
         .testTarget(
             name: "TswLibraryTests",
-            dependencies: ["TswLibrary"]
+            dependencies: [
+                "TswLibrary",
+                .product(name: "Testing", package: "swift-testing"),
+            ]
         ),
-    ]
+    ],
 )

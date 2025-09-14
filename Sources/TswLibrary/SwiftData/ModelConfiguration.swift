@@ -1,3 +1,7 @@
+/*
+ * tsgrissom/TswLibrary
+ */
+
 import SwiftData
 
 public extension ModelConfiguration {

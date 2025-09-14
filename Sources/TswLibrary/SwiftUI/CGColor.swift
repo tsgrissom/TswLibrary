@@ -1,3 +1,7 @@
+/*
+ * tsgrissom/TswLibrary
+ */
+
 import SwiftUI
 
 public extension CGColor {

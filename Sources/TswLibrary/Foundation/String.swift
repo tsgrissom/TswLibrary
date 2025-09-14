@@ -1,13 +1,5 @@
-//
-// File.swift
-//
-// tsgrissom on 9/14/25.
-//
-
-
 /*
- * tsgrissom/Taskmaster
- * Extension => Swift Foundation => String.swift
+ * tsgrissom/TswLibrary
  */
 
 import Foundation

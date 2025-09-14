@@ -1,0 +1,33 @@
+{
+  "originHash" : "131ece352806ea0b8f06859f7905adfb63c4707bee1a215606098b278ec8519c",
+  "pins" : [
+    {
+      "identity" : "loremswiftum",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lukaskubanek/LoremSwiftum.git",
+      "state" : {
+        "revision" : "a293c2339552c8cfb715e7f76c511feec02782ad",
+        "version" : "2.2.3"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "07bf225e198119c23b2b9a0a3432bdb534498873",
+        "version" : "603.0.0-prerelease-2025-08-11"
+      }
+    },
+    {
+      "identity" : "swift-testing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-testing.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1be6b35e5275a89bdb3e29b09812de961297db7d"
+      }
+    }
+  ],
+  "version" : 3
+}
