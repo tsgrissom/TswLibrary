@@ -26,7 +26,7 @@ let package = Package(
         .target(
             name: "TswLibrary",
             dependencies: [
-                .product(name: "LoremSwiftum", package: "LoremSwiftum"),
+                "LoremSwiftum"
             ]
         ),
         .testTarget(

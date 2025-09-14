@@ -30,7 +30,3 @@ public extension Image {
         self.init(systemName: icon)
     }
 }
-
-#Preview {
-    Icon("checkmark")
-}

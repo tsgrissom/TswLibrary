@@ -30,7 +30,3 @@ public struct Icon: View {
         return Image(icon: systemName)
     }
 }
-
-#Preview {
-    Icon("checkmark")
-}
