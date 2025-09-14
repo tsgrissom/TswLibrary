@@ -22,7 +22,7 @@ public struct Icon: View {
     /// an SF Symbols icon.
     /// - Parameters:
     ///   - name: The `systemName` to give the `Image` view, i.e. an icon from SF Symbols
-    init (_ systemName: String) {
+    public init (_ systemName: String) {
         self.systemName = systemName
     }
     
