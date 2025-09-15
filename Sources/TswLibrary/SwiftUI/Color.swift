@@ -76,18 +76,28 @@ public extension Color {
         )
     }
         
-    func toHex() -> String? {
-        #if canImport(UIKit)
-        let ui = UIColor(self)
-        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
-        guard ui.getRed(&r, green: &g, blue: &b, alpha: &a) else { return nil }
-        #else
-        // macOS path would use NSColor
-        return nil
-        #endif
-        let ri = Int(round(Double(r) * 255.0))
-        let gi = Int(round(Double(g) * 255.0))
-        let bi = Int(round(Double(b) * 255.0))
-        return String(format: "#%02X%02X%02X", ri, gi, bi)
+    func toHex(includeAlpha: Bool = false) -> String? {
+		#if canImport(UIKit)
+		let uiColor = UIColor(self)
+		var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+		guard uiColor.getRed(&r, green: &g, blue: &b, alpha: &a) else {
+			return nil
+		}
+		#elseif canImport(AppKit)
+		let nsColor = NSColor(self).usingColorSpace(.deviceRGB)
+		guard let color = nsColor else { return nil }
+		let r = color.redComponent, g = color.greenComponent, b = color.blueComponent, a = color.alphaComponent
+		#endif
+		
+		let ri = Int(round(r * 255))
+		let gi = Int(round(g * 255))
+		let bi = Int(round(b * 255))
+		
+		if includeAlpha {
+			let ai = Int(round(a * 255))
+			return String(format: "#%02X%02X%02X%02X", ri, gi, bi, ai)
+		} else {
+			return String(format: "#%02X%02X%02X", ri, gi, bi)
+		}
     }
 }
