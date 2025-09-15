@@ -7,7 +7,7 @@ import Foundation
 /// Extensions on Swift Foundation's `String` type, including new functions and computed properties useful for string manipulation, parsing, etc.
 public extension String {
     
-    // MARK: Computed Properties
+    // MARK: Properties
     // TODO TEST Write unit tests
     
     /// A Boolean value indicating whether a string has characters; The inverse of `String#isEmpty`
