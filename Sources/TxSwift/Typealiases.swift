@@ -7,7 +7,8 @@ import SwiftUI
 
 // MARK: SwiftData
 public typealias ModelCnt = ModelContainer
-public typealias ModelCfg = ModelConfiguration
+public typealias ModelConf = ModelConfiguration
+public typealias ModelConfig = ModelConfiguration
 
 // MARK: SwiftUI
 public typealias Btn = Button

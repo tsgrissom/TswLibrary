@@ -1,7 +1,10 @@
-# tsgrissom/SwiftLibrary
+# TxSwift
 
-> iOS minimum version: v18
-> macOS minimum version: v15
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/tsgrissom/TxSwift)
+![GPLv3 code license](https://img.shields.io/badge/license-GPLv3-lightgrey.svg?style=flat-square)
 
-A collection of reusable Swift utilities including extensions on existing types
-(new functions, initializers, etc.) as well as custom SwiftUI views and more.
+## Requirements
+
+- Swift 6.2+
+- Xcode 26.0
+- iOS 18+ / macOS 15+
