@@ -5,36 +5,23 @@
 import SwiftUI
 
 public extension Color {
-    
     // MARK: RGB
-    
     /// Creates a new SwiftUI `Color` with the given RGB values, with an optional alpha value.
-    init(
-        r: Double, g: Double, b: Double,
-        alpha: Double = 1.0
-    ) {
+    init(r: Double, g: Double, b: Double, alpha: Double = 1.0) {
         self.init(cgColor: CGColor(red: r, green: g, blue: b, alpha: alpha))
     }
     
     // TODO TEST
-    /// Converts an RGB value from integer to floating-point representation.
-    /// i.e. 0-255 -> 0.0-1.0
-    static func convertRgbFromIntToFp(value: Int) -> Double {
-        // Normalize
-        Double(value) / 255.0
-    }
-    
-    // TODO TEST
-    /// Converts an RGB value from floating-point to integer representation.
-    /// i.e. 0.0-1.0 -> 0-255
-    static func convertRgbFromFpToInt(value: Double) -> Int {
-        // Denormalize
-        Int(round(value * 255.0))
-    }
+	/// Converts an RGB value from integer to floating-point representation.
+	/// i.e. 0-255 -> 0.0-1.0
+	static func normalizeIntChannelValue(_ value: Int) -> Double { Double(value) / 255.0 }
+
+	/// Converts an RGB value from floating-point to integer representation.
+	/// i.e. 0.0-1.0 -> 0-255
+	static func denormalizeFpChannelValue(_ value: Double) -> Int { Int(round(value * 255.0 )) }
     
     static func rgb(_ r: Double, _ g: Double, _ b: Double, _ a: Double = 1.0) -> Color {
-        
-        return Color(r: r, g: g, b: b, alpha: a)
+        Color(r: r, g: g, b: b, alpha: a)
     }
     
     /// Creates a gray SwiftUI `Color` at a random or given intensity.

@@ -27,6 +27,6 @@ public struct Icon: View {
     }
     
     public var body: some View {
-        return Image(icon: systemName)
+        return Image(sfIcon: systemName)
     }
 }

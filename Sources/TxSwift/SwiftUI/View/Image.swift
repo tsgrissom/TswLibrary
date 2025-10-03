@@ -26,7 +26,7 @@ public extension Image {
     ///     Icon("heart.fill")
     /// }
     /// ```
-    init(icon: String) {
-        self.init(systemName: icon)
+    init(sfIcon: String) {
+        self.init(systemName: sfIcon)
     }
 }

@@ -4,7 +4,7 @@
 
 import LoremSwiftum
 
-struct MockUtils {
+public struct MockUtils {
         
     static func randomWords() -> String {
         return Lorem.words(10)

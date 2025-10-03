@@ -4,18 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "TswLibrary",
-    platforms: [
-        .iOS(.v18),
-        .macOS(.v15)
-    ],
+    name: "TxSwift",
+    platforms: [.iOS(.v18), .macOS(.v15)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "TswLibrary",
-            targets: ["TswLibrary"]
-        ),
-    ],
+		// Define the one library this package produces, making it visible to other packages
+		.library(name: "TxSwift", targets: ["TxSwift"]),
+		//.library(name: "TxSwiftUI", targets: ["TxSwiftUI"]),
+		//.library(name: "TxSwiftData", targets: ["TxSwiftData"]),
+	],
     dependencies: [
         .package(url: "https://github.com/lukaskubanek/LoremSwiftum.git", from: "2.2.1"),
         .package(url: "https://github.com/apple/swift-testing.git", branch: "main")
@@ -23,18 +19,23 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "TswLibrary",
-            dependencies: [
-                "LoremSwiftum"
-            ]
-        ),
-        .testTarget(
-            name: "TswLibraryTests",
-            dependencies: [
-                "TswLibrary",
-                .product(name: "Testing", package: "swift-testing"),
-            ]
-        ),
+		// OLD
+//        .target(
+//            name: "TswLibrary",
+//            dependencies: [
+//                "LoremSwiftum"
+//            ]
+//        ),
+//        .testTarget(
+//            name: "TswLibraryTests",
+//            dependencies: [
+//                "TswLibrary",
+//                .product(name: "Testing", package: "swift-testing"),
+//            ]
+//        ),
+		// Modules
+		.target(name: "TxSwift", dependencies: ["LoremSwiftum"]),
+		// Test Suites
+		.testTarget(name: "TxSwiftTests", dependencies: ["TxSwift", .product(name: "Testing", package: "swift-testing")]),
     ],
 )
