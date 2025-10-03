@@ -11,8 +11,4 @@ public extension Double {
     func roundToDecimalPlaces() -> Double {
         (self * 100).rounded() / 100
     }
-
-	func normalizeWithin(_ range: ClosedRange<Double>) -> Double {
-		
-	}
 }
